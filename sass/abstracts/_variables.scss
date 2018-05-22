@@ -1,0 +1,20 @@
+//reset // COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #B28451;
+$color-secondary: #101d2c;
+$color-grey-light-1 : #ededee;
+$color-grey-light-2: #babcbd;
+$color-grey-light-3: #999;
+$color-grey-dark-1: rgb(74, 82, 89);
+$color-grey-dark-2: rgb(28, 32, 38);
+$color-grey-dark-3: rgb(4, 4, 4);
+
+
+// FONT VARIABLES
+$font-primary: 'Cormorant Garamond', serif;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px / 16px(default browser font  size) = 75
+$bp-large: 62.5em; // 1000px / 16px
+$bp-medium: 50em; // 800px / 16px
+$bp-small: 37.5em; // 000px / 16px

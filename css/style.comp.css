@@ -1,0 +1,193 @@
+@charset "UTF-8";
+*,
+*::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  color: #1c2026;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: 100vh 85vh;
+  grid-template-columns: [sidebar-start] 24vw [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300; }
+
+.heading-1 {
+  font-size: 4.5rem;
+  color: #ededee;
+  line-height: 1; }
+  @media only screen and (max-width: 62.5em) {
+    .heading-1 {
+      font-size: 4rem; } }
+
+.heading-2 {
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: 1.1px; }
+  @media only screen and (max-width: 62.5em) {
+    .heading-2 {
+      font-size: 3.5rem; } }
+  .heading-2--light {
+    color: #999; }
+  .heading-2--dark {
+    color: #4a5259; }
+
+.heading-3 {
+  font-size: 1.6rem;
+  color: #999;
+  text-transform: uppercase; }
+
+.heading-4 {
+  font-size: 1.9rem; }
+  .heading-4--light {
+    color: #ededee; }
+  .heading-4--dark {
+    color: #4a5259; }
+
+.bg-video {
+  opacity: .70;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.card {
+  height: 12rem;
+  width: 33vw;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.45);
+  padding: 1rem 3rem;
+  position: fixed;
+  top: 3rem;
+  left: 3rem;
+  z-index: 99;
+  display: grid; }
+  @media only screen and (max-width: 62.5em) {
+    .card {
+      padding: 0rem 2.5rem;
+      height: 10rem;
+      width: 28.3rem;
+      top: 2rem;
+      left: 2rem; } }
+  .card__name {
+    padding-bottom: 3px;
+    align-self: end;
+    border-bottom: 1px solid #babcbd; }
+  .card__nav {
+    height: 30px;
+    padding-top: 3px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between; }
+  .card__link {
+    text-decoration: none;
+    color: #999; }
+
+.story {
+  font-size: 1.6rem;
+  padding: 8.1rem 3rem 6rem 3rem;
+  grid-column: full-start / full-end;
+  border-top: 1px solid #1c2026;
+  display: grid;
+  align-content: space-between; }
+  .story__text {
+    height: 50vh;
+    padding: 2rem 3rem;
+    font-size: inherit;
+    overflow: scroll;
+    padding-top: 2rem;
+    box-shadow: 0 0.15rem 0.25rem rgba(0, 0, 0, 0.25) inset; }
+    .story__text p:not(:last-child) {
+      margin-bottom: 3rem; }
+
+.footer {
+  font-size: 1.4rem;
+  height: 5rem;
+  color: #ededee;
+  background-color: #1c2026;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.95);
+  padding: 1rem 2rem;
+  transform: translateX(-6rem);
+  border: 1px solid #4a5259; }
+
+.nav {
+  list-style: none;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+  grid-gap: 2rem; }
+
+.header {
+  grid-column: full-start / full-end;
+  position: relative; }
+
+.sidebar {
+  background-color: #040404;
+  opacity: .72;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / span 1;
+  display: grid;
+  justify-items: center;
+  align-items: end; }
+  .sidebar::after {
+    content: "╲╱";
+    background-color: black;
+    padding: 2rem;
+    border-radius: 50%;
+    font-size: .9rem;
+    color: #ededee;
+    animation: caret 1.5s ease-out infinite;
+    transform: translateY(-2rem); }
+
+@keyframes caret {
+  0% {
+    transform: translateY(-2rem); }
+  50% {
+    transform: translateY(-3rem); }
+  100% {
+    transform: translateY(-2rem); } }
+  @media (min-height: 700px) {
+    @keyframes caret {
+      from {
+        bottom: -85px; }
+      to {
+        bottom: -75px; } } }
+
+.sidebar-2 {
+  background-color: #040404;
+  opacity: .92;
+  padding: 5vh;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 2 / span 1;
+  display: grid;
+  align-items: end; }
+
+.profile-pic {
+  display: block;
+  height: 21vh;
+  width: auto;
+  border: 3px solid #1c2026;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.95); }

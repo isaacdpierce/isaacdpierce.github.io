@@ -1,0 +1,49 @@
+.card {
+  height: 12rem;
+  width: 33vw;
+  background-color: #fff;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .45);
+  padding: 1rem 3rem;
+  position: fixed;
+  top: 3rem;
+  left: 3rem;
+  z-index: 99;
+
+  display: grid;
+
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 0rem 2.5rem;
+    height: 10rem;
+    width: 28.3rem;
+    top: 2rem;
+    left: 2rem;
+  }
+
+  &__name {
+    padding-bottom: 3px;
+    align-self: end;
+    border-bottom: 1px solid $color-grey-light-2;
+  }
+
+  &__nav {
+    height: 30px;
+    padding-top: 3px;
+    list-style: none;
+    
+
+    display: flex;
+    justify-content: space-between;
+   
+  }
+
+  &__item {
+    
+  }
+
+  &__link{
+    text-decoration: none;
+    color: $color-grey-light-3;
+  }
+}
+

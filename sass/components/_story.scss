@@ -1,0 +1,33 @@
+.story {
+  font-size: 1.6rem;
+  padding: 8.1rem 3rem 6rem 3rem;
+  grid-column: full-start / full-end;
+  border-top: 1px solid $color-grey-dark-2;
+  
+  display: grid;
+  align-content: space-between; // pushing footer to bottom
+
+  &__text {
+    
+    height: 50vh;
+    padding: 2rem 3rem;
+    font-size: inherit;
+    overflow: scroll;  
+    padding-top: 2rem;
+    box-shadow: 0 .15rem .25rem rgba(0, 0, 0, .25) inset;
+
+    // @media only screen and (max-width: $bp-largest) {
+    //     transform: translateX(-20rem);
+    //     z-index: 1000;
+        
+    // }
+    p {
+    
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }  
+
+
+}
